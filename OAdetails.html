@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="sourceJS/common.js"></script>
+		<script type="text/javascript" src="sourceJS/OAdetails.js"></script>
+		<link rel="stylesheet" href="css/appindex.css" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="Hui-iconfont/iconfont.css" rel="stylesheet" />
+		<title></title>
+		<style>
+			.icon {
+				font-size: 35px;
+				margin: 0px 0;
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+			
+			.mui-table-view {
+				font-size: 14px;
+			}
+			
+			.i-hours {
+				float: right;
+				margin-right: 20px;
+				font-size: 12px;
+				color: #C0C0C0;
+			}
+			
+			h4 p {
+				word-break: break-all;
+				word-wrap: break-word;
+				-moz-user-select: auto;
+				-webkit-user-select: auto;
+				-ms-user-select: auto;
+				line-height: 30px;
+				font-weight: normal;
+				color: #000000;
+			}
+			
+			.mui-input-row {
+				min-height: 40px;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea,
+			.mui-input-row label~select {
+				width: 70%;
+				font-size: 14px;
+			}
+			
+			.mui-input-row label {
+				width: 30%;
+				min-width: 80px;
+				font-size: 14px;
+			}
+			.div-detials{
+				padding-left: 10px;
+				box-shadow: 1px 1px 1px #888888;;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-action-back mui-icon-back mui-pull-left" id="back"></a>
+			<h1 id="title" class="mui-title">明细信息</h1>
+			<a class="mui-icon mui-icon-chatbubble mui-pull-right" id="btnIm"></a>
+		</header>
+		<div class="mui-content">
+			<ul id="info_data" class="mui-table-view">
+			</ul>
+			<ul id="details_data" class="mui-table-view">
+			</ul>
+			<ul>
+				<li class="my-space"></li>
+			</ul>
+			<ul id="review_data" class="mui-table-view">
+			</ul>
+		</div>
+	</body>
+
+</html>

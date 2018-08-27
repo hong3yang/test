@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="sourceJS/OALists.js"></script>
+		<script type="text/javascript" src="sourceJS/common.js"></script>
+		<link rel="stylesheet" href="css/appindex.css" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="Hui-iconfont/iconfont.css" rel="stylesheet" />
+		<style>
+			.icon {
+				font-size: 35px;
+				margin: 0px 0;
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+			
+			h4 p {
+				word-break: break-all;
+				word-wrap: break-word;
+				-moz-user-select: auto;
+				-webkit-user-select: auto;
+				-ms-user-select: auto;
+				line-height: 30px;
+				font-weight: normal;
+				color: #000000;
+			}
+			
+		</style>
+		<title></title>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-back mui-pull-left" id="back"></a>
+			<h1 id="title" class="mui-title">办公列表信息</h1>
+			<a class="mui-icon mui-icon-compose mui-pull-right" id="new"></a>
+		</header>
+		<div class="mui-content">
+			<div style="padding: 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item0">
+						未提交
+					</a>
+					<a class="mui-control-item" href="#item1">
+						待审核
+					</a>
+					<a class="mui-control-item" href="#item2">
+						已审核
+					</a>
+					<a class="mui-control-item" href="#item3">
+						全部
+					</a>
+				</div>
+			</div>
+			<div>
+				<div id="item0" class="mui-control-content mui-active">
+					<ul class="mui-table-view">
+
+					</ul>
+				</div>
+				<div id="item1" class="mui-control-content mui-active">
+					<ul class="mui-table-view">
+
+					</ul>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<ul class="mui-table-view">
+
+					</ul>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<ul class="mui-table-view">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+
+</html>

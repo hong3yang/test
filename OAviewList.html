@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="sourceJS/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<script src="js/mui.picker.min.js"></script>
+		<link rel="stylesheet" href="css/appindex.css" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/feedback.css" />
+		<link href="Hui-iconfont/iconfont.css" rel="stylesheet" />
+		<title></title>
+		<style>
+			.icon {
+				font-size: 35px;
+				margin: 0px 0;
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+			
+			.mui-table-view {
+				font-size: 14px;
+			}
+			
+			.i-hours {
+				float: right;
+				margin-right: 20px;
+				font-size: 12px;
+				color: #C0C0C0;
+			}
+			
+			h4 p {
+				word-break: break-all;
+				word-wrap: break-word;
+				-moz-user-select: auto;
+				-webkit-user-select: auto;
+				-ms-user-select: auto;
+				line-height: 30px;
+				font-weight: normal;
+				color: #000000;
+			}
+			
+			.mui-input-row {
+				min-height: 40px;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea,
+			.mui-input-row label~select {
+				width: 70%;
+				font-size: 14px;
+			}
+			
+			.mui-input-row label {
+				width: 30%;
+				min-width: 80px;
+				font-size: 14px;
+			}
+			
+			.mui-table-view {
+				margin-top: 1px;
+				background-color: inherit;
+				height: 44px;
+			}
+			
+			.mui-table-view-cell {
+				padding: 13px 14px;
+			}
+			
+			.mui-table-view-cell.mui-active {
+				background-color: inherit;
+			}
+			
+			.list-content {
+				margin-top: 56px;
+			}
+			
+			#searchBar {
+				padding-right: 0px;
+				padding-left: 0px;
+			}
+			
+			.mui-button-row {
+				padding-top: 0px;
+			}
+			
+			.mui-btn-date {
+				width: 69%;
+				height: 90%;
+				margin: 0.5% 0px;
+				text-align: left;
+			}
+			.list-content li{
+				list-style: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-action-back mui-icon-back mui-pull-left" id="back"></a>
+			<h1 id="title" class="mui-title">已办事务</h1>
+		</header>
+
+		<div class="mui-content">
+			<nav class="mui-bar" id="searchBar">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">查询条件</a>
+						<div class="mui-collapse-content">
+							<form class="mui-input-group">
+								<div class="mui-input-row">
+									<label>审核日期：</label>
+									<button id='djrq1' class="mui-btn-date">选择日期 ...</button>
+								</div>
+								<div class="mui-input-row">
+									<label>到：</label>
+									<button id='djrq2' class="mui-btn-date">选择日期 ...</button>
+								</div>
+								<div class="mui-input-row mui-plus-visible">
+									<label>审核状态：</label>
+									<select id="review_status">
+										<option value="">全部</option>
+										<option value="1">同意</option>
+										<option value="2">不同意</option>
+										<option value="3">弃权</option>
+									</select>
+								</div>
+								<div class="mui-input-row mui-plus-visible">
+									<label>人员部门：</label>
+									<select id="review_gzbm">
+									</select>
+								</div>
+								<div class="mui-input-row mui-plus-visible">
+									<label>人员姓名：</label>
+									<input type="text" id="review_gzryxm" />
+								</div>
+								<div class="mui-input-row mui-plus-visible">
+									<label id="l-templetid">业务类型：</label>
+									<select id="templetid"></select>
+								</div>
+								<div class="mui-button-row">
+									<button class="mui-btn mui-btn-primary" type="button" id="btnSearch" >查询</button>
+								</div>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="list-content">
+
+			</div>
+		</div>
+		<script type="text/javascript" src="sourceJS/OAviewList.js"></script>
+
+	</body>
+
+</html>

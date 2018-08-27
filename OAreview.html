@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="sourceJS/common.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<link href="css/city-picker.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/appindex.css" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/feedback.css" />
+		<link href="Hui-iconfont/iconfont.css" rel="stylesheet" />
+		<title></title>
+		<style>
+			.icon {
+				font-size: 35px;
+				margin: 0px 0;
+				-webkit-transition: font-size 0.25s ease-out 0s;
+				-moz-transition: font-size 0.25s ease-out 0s;
+				transition: font-size 0.25s ease-out 0s;
+			}
+			
+			.mui-table-view {
+				font-size: 14px;
+			}
+			
+			.i-hours {
+				float: right;
+				margin-right: 20px;
+				font-size: 12px;
+				color: #C0C0C0;
+			}
+			
+			h4 p {
+				word-break: break-all;
+				word-wrap: break-word;
+				-moz-user-select: auto;
+				-webkit-user-select: auto;
+				-ms-user-select: auto;
+				line-height: 30px;
+				font-weight: normal;
+				color: #000000;
+			}
+			
+			.mui-input-row {
+				min-height: 40px;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea,
+			.mui-input-row label~select {
+				width: 70%;
+				font-size: 14px;
+			}
+			
+			.mui-input-row label {
+				width: 30%;
+				min-width: 80px;
+				font-size: 14px;
+			}
+			
+			.oa_content {
+				padding-left: 0px !important;
+			}
+			
+			.div-detials {
+				padding-left: 10px;
+				box-shadow: 1px 1px 1px #888888;
+			}
+			
+			.mui-btn-date {
+				width: 69%;
+				height: 90%;
+				margin: 0.5% 0px;
+				text-align: left;
+			}
+			
+			.mui-input-row {
+				min-height: 40px;
+				height: auto;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea,
+			.mui-input-row label~select {
+				width: 70%;
+				font-size: 14px;
+			}
+			
+			.mui-input-range textarea {
+				font-size: 14px;
+			}
+			
+			.mui-input-row label {
+				width: 30%;
+				min-width: 80px;
+				height: auto;
+				font-size: 14px;
+			}
+			
+			.mui-input-group .mui-btn {
+				width: 49%;
+				float: left;
+			}
+			
+			.mui-btn-blue {
+				height: 47px;
+			}
+			
+			#submit {
+				margin-left: 2%;
+			}
+			
+			.files-lists li {
+				float: left;
+				list-style: none;
+				/*margin-left: 15px;*/
+				width: 30%;
+			}
+			
+			.files-lists img {
+				height: 120px;
+				border: 1px solid #C0C0C0;
+				margin: 5px auto;
+				border-radius: 5px;
+			}
+			
+			.radio-div {
+				margin: -40px 0 6px 30%;
+				float: right;
+				/*border: 1px solid #000000;*/
+			}
+			
+			.radio-item {
+				margin-top: 8px;
+				height: 25px;
+				line-height: 25px;
+				float: left;
+				/*border: 1px solid #C0A16B;*/
+			}
+			
+			.radio-item-lab {
+				margin-top: -8px;
+				float: left;
+			}
+			
+			.radio-item-ipt {
+				float: left;
+				margin-top: 5px;
+			}
+			
+			.mui-card {
+				margin: 0px;
+				/*box-shadow: none;*/
+			}
+			
+			.mui-card-content-inner {
+				padding-left: 0px;
+				padding-bottom: 0px;
+				padding-top: 0px;
+				/*border: 1px solid #CCCCCC;*/
+			}
+			
+			.mui-card-content-inner:nth-child(even) {
+				background: #FCF8E3;
+			}
+			
+			.mui-card-footer {
+				position: inherit;
+				min-height: 45px;
+				padding: 0px;
+				padding-left: 5px;
+				text-align: center;
+			}
+			
+			.mui-card-header {
+				font-size: 14px;
+			}
+			
+			.mui-btn-blue {
+				height: 40px;
+			}
+			
+			#details_group {
+				background-color: inherit;
+			}
+			
+			.div-details-left {
+				border-top: 1px solid #C0C0C0;
+				border-bottom: 1px solid #C0C0C0;
+			}
+			.mui-select-icon{
+				font-size: 20px;
+			    position: absolute;
+			    z-index: 1;
+			    top: 10px;
+			    right: 0;
+			    width: 38px;
+			    height: 38px;
+			    text-align: center;
+			    color: #999;
+			}
+		</style>
+	</head>
+
+	<body class="feedback">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-action-back mui-icon-back mui-pull-left" id="back"></a>
+			<h1 id="title" class="mui-title">审批</h1>
+		</header>
+		<div class="mui-content" >
+			<input type="hidden" id="OAlat" />
+			<input type="hidden" id="OAlng" />
+			<input type="hidden" id="OAid" />
+			<ul id="info_data" class="mui-table-view">
+			</ul>
+			<ul id="details-data" class="mui-table-view">
+			</ul>
+			<div class="mui-input-group" id="form_group" style="margin: 5px;">
+			</div>
+			<div class="mui-input-group" id="details_group" style="margin: 5px; margin-bottom: 65px;  ">
+			</div> 
+			
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>审核结果</label>
+					<select id="reviewRes">
+						<option value="0">待审</option>
+						<option value="1">同意</option>
+						<option value="2">不同意</option>
+						<option value="3">弃权</option>
+					</select>
+				</div>
+				<div class="mui-input-row" style="height:100px">
+					<label>审核备注</label>
+					<textarea id="reviewBz" rows="5" placeholder="请输入审核备注"></textarea>
+				</div>
+			</div>
+			<div class="mui-input-range">
+				<div id='image-list' class="row image-list" style="background-color: #efeff4">
+				</div>
+				<div id="file-list" style="height: 60px; display: none;">附件选择</div>
+			</div>
+			<div id="dcontent" style="display:none;">
+				<ul id="files" style="text-align:left;">
+					<p id="empty" style="font-size:12px;color:#C6C6C6;">无上传文件</p>
+				</ul>
+			</div>
+			<ul id="review-space" style="display: none;">
+				<li class="my-space"></li>
+			</ul>
+			<ul id="review_data" class="mui-table-view" style="margin-bottom: 27px;">
+			</ul>
+			<br /> 
+		</div>
+		<nav class="mui-bar mui-bar-tab" >
+			<button type="button" id="btn_Save" class="mui-btn mui-btn-danger">确定提交</button>
+		</nav>
+		<script type="text/javascript" src="sourceJS/OAcreateForm.js"></script>
+		<script type="text/javascript" src="sourceJS/OAreview.js"></script>
+	</body>
+
+</html>

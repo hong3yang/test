@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.js"></script>
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+		<script src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="sourceJS/common.js"></script>
+
+		<!--必要样式-->
+		<link href="css/city-picker.css" rel="stylesheet" type="text/css">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/defineIcon.css" />
+		<link rel="stylesheet" href="css/appindex.css" />
+		<title></title>
+		<style>
+			.mui-title {
+				line-height: 18px;
+			}
+			#search2.mui-search .mui-placeholder .mui-icon {
+				font-size: 18px;
+			}
+			
+			#search2.mui-search .mui-placeholder {
+				margin-top: 2px;
+				font-size: 14px;
+			}
+			#search2.mui-search .mui-icon-clear {
+				top: 10px;
+			}
+			.mui-search{
+				margin-right: 0px;
+				margin-left: 0px;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-action-back mui-icon-back mui-pull-left"></a>
+			<h1 class="mui-title" id="title"> 
+				<div class="mui-input-row mui-search" id="search2">
+					<input type="search" class="mui-input-clear" id="ipt_query" placeholder="请输入条件">
+				</div>
+			 </h1>
+			<a class="mui-icon mui-pull-right" id="btnquery" style="font-size: 14px; margin-top: 6px;">查询</a>
+		</header>
+		<div class="mui-content" style="background-color: white;">
+			<ul class="mui-table-view" id="content">
+			</ul>
+		</div>
+		<script src="sourceJS/OAdropdownPage.js" type="text/javascript"></script>
+	</body>
+
+</html>
